@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Title -->
+    <title>Contact Me</title>
+
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link rel="stylesheet" href="assets/vendor/aos/aos.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css">
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Template Main CSS File -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ======= Mobile nav toggle button ======= -->
+    <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
+
+    <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex flex-column justify-content-center">
+
+        <nav id="navbar" class="navbar nav-menu">
+            <ul>
+                <li><a href="index.html#hero" class="nav-link scrollto active"><i class="bx bx-home"></i>
+                        <span>Home</span></a></li>
+                <li><a href="index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i>
+                        <span>About</span></a></li>
+                <li><a href="index.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i>
+                        <span>Resume</span></a></li>
+                <li><a href="index.html#services" class="nav-link scrollto"><i class="bx bx-server"></i>
+                        <span>Services</span></a></li>
+                <br>
+                <li><a href="Portfolio.html" class="nav-link scrollto"><i class="bx bx-book-content"></i>
+                        <span>Portfolio</span></a></li>
+                <li><a href="Shop.html" class="nav-link scrollto"><i
+                            class="fa fa-shopping-cart"></i><span>Shop</span></a></li>
+                <li><a href="#" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+            </ul>
+        </nav><!-- .nav-menu -->
+
+    </header><!-- End Header -->
+
+    <!-- Add this HTML structure within the body of your document -->
+    <section id="faq" class="faq">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="question" onclick="toggleFAQ(this)">What should I include in my graphic design portfolio?
+                </div>
+                <div class="answer">In your graphic design portfolio, showcase a variety of your best work, including
+                    logos, branding projects, website designs, brochures, posters, and other design pieces. Highlight
+                    your strengths and versatility as a designer.</div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="question" onclick="toggleFAQ(this)">How many pieces should my portfolio consist of?</div>
+                <div class="answer">It's ideal to have around 10 to 15 pieces in your portfolio. Quality is more
+                    important than quantity. Select your best work that demonstrates your skills and style.</div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="question" onclick="toggleFAQ(this)">Should I include personal projects in my portfolio?
+                </div>
+                <div class="answer">Yes, personal projects can showcase your creativity and passion. They can also fill
+                    gaps in your portfolio when you're starting out as a designer.</div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="question" onclick="toggleFAQ(this)">How can I present my portfolio online?</div>
+                <div class="answer">You can create a professional website or use platforms like Behance, Dribbble, or
+                    Adobe Portfolio to display your work. Make sure your online portfolio is well-organized and easy to
+                    navigate.</div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                <div class="question" onclick="toggleFAQ(this)">What's the best way to get feedback on my portfolio?
+                </div>
+                <div class="answer">Seek feedback from fellow designers, mentors, or online design communities. Honest
+                    critiques can help you improve your portfolio and identify areas for growth.</div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Add this JavaScript snippet to toggle FAQ answers -->
+    <script>function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            faqItem.classList.toggle('active');
+            const answer = faqItem.querySelector('.answer');
+            answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+        }</script>
+
+
+    <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Contact</h2>
+            </div>
+
+            <div class="row mt-1">
+
+                <div class="col-lg-4">
+                    <div class="info">
+                        <div class="address">
+                            <i class="bi bi-geo-alt"></i>
+                            <h4>Location:</h4>
+                            <p>68-A,Godage Street,Anuradhapura,Sri Lanka</p>
+                        </div>
+
+                        <div class="email">
+                            <i class="bi bi-envelope"></i>
+                            <h4>Email:</h4>
+                            <p>iamsusithalwis@gmail.com</p>
+                        </div>
+
+                        <div class="phone">
+                            <i class="bi bi-phone"></i>
+                            <h4>Call:</h4>
+                            <p>+94 71 764 7805</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-8 mt-5 mt-lg-0">
+
+
+
+
+                    <!--onsubmit="return validateForm();"-->
+
+                    <form name="contact" method="POST" action="assets/php/connect.php" id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                                    onkeyup="validateForm()">
+                                <span id="name-error" class="name-error"></span>
+                            </div>
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <input type="email" class="email-field" name="email" id="email" placeholder="Your Email"
+                                    onkeyup="validateEmail()" required>
+                                <span id="email-error" class="email-error"></span>
+                            </div>
+
+                            <script>
+                                function validateForm() {
+                                    var nameField = document.getElementById("name");
+                                    var subjectField = document.getElementById("subject");
+                                    var messageField = document.getElementById("message");
+
+                                    var nameError = document.getElementById("name-error");
+                                    var subjectError = document.getElementById("subject-error");
+                                    var messageError = document.getElementById("message-error");
+
+                                    var nameValue = nameField.value.trim();
+                                    var subjectValue = subjectField.value.trim();
+                                    var messageValue = messageField.value.trim();
+
+                                    var valid = true;
+
+                                    if (nameValue === "") {
+                                        nameError.innerHTML = "Name is required.";
+                                        valid = false;
+                                    } else {
+                                        nameError.innerHTML = "";
+                                    }
+
+                                    if (subjectValue === "") {
+                                        subjectError.innerHTML = "Subject is required.";
+                                        valid = false;
+                                    } else {
+                                        subjectError.innerHTML = "";
+                                    }
+
+                                    if (messageValue === "") {
+                                        messageError.innerHTML = "Message is required.";
+                                        valid = false;
+                                    } else {
+                                        messageError.innerHTML = "";
+                                    }
+
+                                    return valid;
+                                }
+
+                                function validateEmail() {
+                                    var emailField = document.getElementById("email");
+                                    var emailError = document.getElementById("email-error");
+                                    var emailValue = emailField.value.trim();
+
+                                    if (emailValue === "") {
+                                        emailError.innerHTML = "Email is required.";
+                                        return false;
+                                    }
+
+                                    if (!emailValue.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+                                        emailError.innerHTML = "Please Enter a Valid Email";
+                                        return false;
+                                    }
+
+                                    emailError.innerHTML = "";
+                                    return true;
+                                }
+                            </script>
+
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                                onkeyup="validateForm()" required>
+                            <span id="subject-error" class="subject-error"></span>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <textarea class="form-control" name="message" rows="5" placeholder="Message"
+                                onkeyup="validateForm()" required></textarea>
+                            <span id="message-error" class="message-error"></span>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" style="background-color: #007bff; color: white; padding: 10px 20px; margin-top: 30px; border: none; border-radius: 4px; cursor: pointer;">Send Message</button>
+                        </div>
+                        <input type="hidden" name="form-name" value="contact" />
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container">
+            <h2>Susith Deshan Alwis</h2>
+
+            <div class="social-links">
+                <a href="#" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100014079360520" class="facebook" target="_blank"><i
+                        class="bx bxl-facebook"></i></a>
+                <a href="https://www.instagram.com/susith_alwis/" class="instagram" target="_blank"><i
+                        class="bx bxl-instagram"></i></a>
+                <a href="https://adobeid-na1.services.adobe.com/ims/authorize/v1?client_id=BehanceWebSusi1&redirect_uri=https%3A%2F%2Fwww.behance.net%2Fsusithalwis%3Fisa0%3D1%23old_hash%3D%26from_ims%3Dtrue%26client_id%3DBehanceWebSusi1%26api%3Dauthorize%26scope%3DAdobeID%2Copenid%2Cgnav%2Csao.cce_private%2Ccreative_cloud%2Ccreative_sdk%2Cbe.pro2.external_client%2Cadditional_info.roles&scope=AdobeID%2Copenid%2Cgnav%2Csao.cce_private%2Ccreative_cloud%2Ccreative_sdk%2Cbe.pro2.external_client%2Cadditional_info.roles&state=%7B%22ac%22%3A%22behance.net%22%2C%22context%22%3A%7B%22intent%22%3A%22signIn%22%7D%2C%22jslibver%22%3A%22v2-v0.38.0-17-g633319d%22%2C%22nonce%22%3A%222399408319421794%22%7D&response_type=token&prompt=none"
+                    class="google-plus" target="_blank"><i class="bx bxl-behance"></i></a>
+                <a href="https://www.linkedin.com/in/susith-deshan/" class="linkedin" target="_blank"><i
+                        class="bx bxl-linkedin"></i></a>
+            </div>
+
+
+            <div class="copyright">
+                &copy; 2023 Susith Deshan Alwis. All rights reserved.
+            </div>
+        </div>
+
+
+    </footer><!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/php-email-form/send_email.php"></script>
+    <script src="assets/js/sweetalert.min.js"></script>
+    <script src="assets/js/sweetalert2@10.js"></script>
+    <script src="assets/js/jquery/jquery-3.7.1.min.js"></script>
+
+    <!--<script>
+        swal({
+            title: "Good job!",
+            text: "You clicked the button!",
+            icon: "success",
+            button: "Aww yiss!",
+        });
+    </script>
+    -->
+
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+
+
+
+</body>
+
+</html>

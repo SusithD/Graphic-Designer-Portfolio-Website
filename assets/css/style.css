@@ -1,0 +1,1846 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #e6e6e6;
+    background-color: #1a1a1a;
+}
+
+a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00bfff;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Raleway", sans-serif;
+    color: #ffffff;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: #1e90ff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all 0.4s;
+}
+
+.back-to-top i {
+    font-size: 28px;
+    color: #ffffff;
+    line-height: 0;
+}
+
+.back-to-top:hover {
+    background: #0678e3;
+    color: #ffffff;
+}
+
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Preloader */
+.preloader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #111;
+    transform-origin: bottom;
+    z-index: 111111
+}
+
+.preloader .black_wall {
+    height: 100%;
+    background-color: #222;
+    transform-origin: top;
+    animation: preloader_slide 0.5s ease-in-out 0s 1 normal both
+}
+
+.preloader .loader {
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    border-radius: 2px;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: var(--primary_color);
+    transform-origin: left;
+    animation: loader_running 3s ease-in-out 1s infinite normal both
+}
+
+.preloader.off {
+    animation: preloader_slide 0.5s ease-in-out 0s 1 reverse both
+}
+
+
+@keyframes animate-preloader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+    [data-aos-delay] {
+        transition-delay: 0 !important;
+    }
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 9997;
+    transition: all 0.5s;
+    padding: 15px;
+    overflow-y: auto;
+    background: #1a1a1a;
+    color: #e6e6e6;
+}
+
+@media (max-width: 991px) {
+    #header {
+        width: 300px;
+        background: #1a1a1a;
+        border-right: 1px solid #353535;
+        left: -300px;
+    }
+}
+
+@media (min-width: 991px) {
+    #main {
+        margin-left: 100px;
+    }
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+
+.nav-menu {
+    padding: 0;
+    display: block;
+}
+
+.nav-menu * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu>ul>li {
+    position: relative;
+    white-space: nowrap;
+}
+
+.nav-menu a,
+.nav-menu a:focus {
+    display: flex;
+    align-items: center;
+    color: #e6e6e6;
+    padding: 10px 18px;
+    margin-bottom: 8px;
+    transition: 0.3s;
+    font-size: 15px;
+    border-radius: 20px;
+    background: #353535;
+    height: 56px;
+    width: 100%;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.nav-menu a i,
+.nav-menu a:focus i {
+    font-size: 20px;
+    color: #fff;
+}
+
+.nav-menu a span,
+.nav-menu a:focus span {
+    padding: 0 5px 0 7px;
+    color: #45505b;
+}
+
+@media (min-width: 992px) {
+
+    .nav-menu a,
+    .nav-menu a:focus {
+        width: 56px;
+    }
+
+    .nav-menu a span,
+    .nav-menu a:focus span {
+        display: none;
+        color: #fff;
+    }
+}
+
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus,
+.nav-menu li:hover>a {
+    color: #fff;
+    background: #0678e3;
+}
+
+.nav-menu a:hover span,
+.nav-menu .active span,
+.nav-menu .active:focus span,
+.nav-menu li:hover>a span {
+    color: #fff;
+}
+
+.nav-menu a:hover,
+.nav-menu li:hover>a {
+    width: 100%;
+    color: #fff;
+}
+
+.nav-menu a:hover span,
+.nav-menu li:hover>a span {
+    display: block;
+}
+
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 9998;
+    border: 0;
+    background: none;
+    font-size: 28px;
+    transition: all 0.4s;
+    outline: none !important;
+    line-height: 0;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 5px;
+    color: #e6e6e6;
+}
+
+.mobile-nav-toggle i {
+    color: #e6e6e6;
+}
+
+.mobile-nav-active {
+    overflow: hidden;
+}
+
+.mobile-nav-active #header {
+    left: 0;
+}
+
+.mobile-nav-active .mobile-nav-toggle {
+    color: #fff;
+    background-color: #0563bb;
+}
+
+.side-nav {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-left: auto;
+}
+
+.user h2 {
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.user-img {
+    width: 40px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.star-img {
+    width: 20px;
+}
+
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: url("../img/bg6.jpg") top right no-repeat;
+    color: #e6e6e6;
+    background-size: cover;
+    position: relative;
+}
+
+@media (min-width: 992px) {
+    #hero {
+        padding-left: 160px;
+    }
+}
+
+#hero:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#hero h1 {
+    margin: 20px 0 0 0;
+    /* Adjusted margin-top */
+    font-size: 54px;
+    font-family: Poppins;
+    line-height: 56px;
+    color: #e6e6e6;
+}
+
+#hero h4 {
+    margin: 10px 0 0 0;
+    /* Adjusted margin-top */
+    font-size: 20px;
+    font-family: Poppins;
+    line-height: 56px;
+    color: #e6e6e6;
+}
+
+#hero h3 {
+    margin: 10px 0 0 0;
+    /* Adjusted margin-top */
+    font-size: 12px;
+    font-family: Poppins;
+    line-height: 56px;
+    color: #e6e6e6;
+}
+
+#hero h2 {
+    margin: 10px 0 0 0;
+    /* Adjusted margin-top */
+    font-size: 20px;
+    font-family: Poppins;
+    line-height: 56px;
+    color: #e6e6e6;
+}
+
+#hero h6 {
+    margin: 10px 0 0 0;
+    /* Adjusted margin-top */
+    font-size: 13px;
+    font-family: Poppins;
+    color: #e6e6e6;
+}
+
+#hero h {
+    margin: 10px 0 0 0;
+    /* Adjusted margin-top */
+    font-size: 18px;
+    font-family: Poppins;
+    line-height: 56px;
+    color: #e6e6e6;
+}
+
+#hero p {
+    color: #e6e6e6;
+    margin: 15px 0 0 0;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+#hero p span {
+    color: #0563bb;
+    letter-spacing: 1px;
+    font-family: Poppins;
+    font-size: 20px;
+}
+
+#hero .social-links {
+    margin-top: 70px;
+    /* Adjusted margin-top value to move the social links lower */
+    margin-bottom: auto;
+    display: flex;
+}
+
+#hero .social-links a {
+    font-size: 24px;
+    display: inline-block;
+    color: #e6e6e6;
+    line-height: 1;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+#hero .social-links a:hover {
+    color: #0563bb;
+}
+
+/* Style the button container */
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+
+}
+
+/* Style the primary button */
+.buttons .btn-primary {
+    background-color: #0563bb;
+    color: #fff;
+    padding: 10px 20px;
+    width: 150px;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    margin-right: 10px;
+    /* Adjust the margin-right for spacing */
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+/* Style the secondary button */
+.buttons .btn-secondary {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    width: 150px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+/* Add hover effect for both buttons */
+.buttons .btn-primary:hover,
+.buttons .btn-secondary:hover {
+    background-color: #0450a1; /* Adjust the hover color as needed */
+    transform: scale(1.05); /* Scale up the button on hover */
+}
+
+/* Add click effect for both buttons */
+.buttons .btn-primary:active,
+.buttons .btn-secondary:active {
+    transform: scale(0.95); /* Scale down the button on click */
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+    padding: 60px 0;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    color: #e6e6e6;
+}
+
+.section-title {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #e6e6e6;
+}
+
+.section-title h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #333;
+    bottom: 1px;
+    left: calc(50% - 60px);
+}
+
+.section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #0563bb;
+    bottom: 0;
+    left: calc(50% - 20px);
+}
+
+.section-title p {
+    margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about {
+    background-color: #1a1a1a;
+    color: #e6e6e6;
+}
+
+.about-content {
+    padding: 80px 0;
+}
+
+.about-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.info-box {
+    background: #2c2c2c;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.info-box i {
+    font-size: 28px;
+    color: #3498db;
+}
+
+.info-box h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    color: #e6e6e6;
+}
+
+.info-box p {
+    margin: 0;
+    font-size: 16px;
+}
+
+
+/*--------------------------------------------------------------
+# Shop
+--------------------------------------------------------------*/
+.product-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+/* In your CSS file or within a <style> tag in your HTML */
+.top-buttons {
+    position: fixed;
+    top: 5px; /* Adjust as needed to position the buttons */
+    right: 10px; /* Adjust as needed to position the buttons */
+    z-index: 1000; /* Ensure the buttons appear above other content */
+}
+
+.login-button {
+    background-color: #2c2c2c; /* Button background color */
+    color: #fff; /* Text color */
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.cart-button {
+    background-color: #2c2c2c; /* Button background color */
+    color: #fff; /* Text color */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Hover effect (optional) */
+.login-button:hover, .cart-button:hover {
+    opacity: 0.8;
+}
+
+
+
+.overlayC {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    text-align: center;
+}
+
+/* Style for the modal */
+.modalC {
+    background-color: #222;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    max-height: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Close button style */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.close:hover {
+color: red;
+}
+
+
+/* Style for product categories and search bar labels */
+.product-categories,
+.product-search {
+  display: inline-block;
+  margin-bottom: 20px;
+  width: 400px;
+  vertical-align: top;
+  margin-right: 30px;
+}
+
+.product-categories label,
+.product-search label {
+  display: block;
+  color: #fff; 
+  margin-bottom: 5px;
+  font-family: Poppins;
+}
+
+/* Style for the select input */
+.product-categories select {
+  width: 100%; 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  background-color: #f7f7f7; 
+  color: #333; 
+  font-family: Poppins;
+}
+
+/* Style for the search input */
+.product-search input {
+  width: 100%; 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  background-color: #f7f7f7; 
+  color: #333;
+  
+}
+
+/* Style for the search bar */
+.product-search {
+    text-align: center;
+    position: relative;
+    float: right;
+    margin-right: auto;
+}
+
+.product-search input[type="text"] {
+    width: 400px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-search input[type="text"]:focus {
+    background-color: #fff; /* Change to white when focused */
+}
+
+/* Search suggestions */
+.search-suggestions {
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    max-height: 150px;
+    overflow-y: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-suggestions ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Style for the search label */
+.search-label {
+    margin-bottom: 5px;
+    font-family: Poppins;
+    color: #333;
+    text-align: left;
+}
+
+
+.search-suggestions li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-suggestions li:last-child {
+    border-bottom: none;
+}
+
+.search-suggestions li:hover {
+    background-color: #f0f0f0;
+}
+
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px; 
+    margin: 10px;
+}
+
+
+
+.product {
+    width: 300px;
+    padding: 20px; /* Adjust the padding inside individual products */
+    border-radius: 5px;
+    text-align: left;
+    background-color: #2c2c2c;
+    margin-bottom: 20px;
+}
+
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    position: relative; /* Added to position the button */
+    transition: transform 0.3s; /* Added transition for smooth effect */
+
+}
+
+/* Style for the "View Project" button */
+.product img::after {
+    content: "View Project";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0; 
+    transition: opacity 0.3s; 
+}
+
+.product img:hover {
+    transform: scale(1.1); /* Zoom in the image on hover */
+}
+
+.product img:hover::after {
+    opacity: 1; /* Show the button on hover */
+}
+
+.image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.product-image a:hover .image-overlay {
+    opacity: 1;
+}
+
+/* Style for the modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+/* Style for the modal content */
+.modal-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #2c2c2c;
+    padding: 20px;
+    border-radius: 5px;
+    width: 1000px; /* Increase the width */
+    height: 700px; /* Increase the height */
+}
+
+/* Modal content */
+
+/* Modal image */
+#modalImage {
+    max-width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Modal title */
+#modalTitle {
+    font-size: 24px;
+    font-family: Poppins;
+    color: #fff;
+    margin: 20px 0;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Modal description */
+#modalDescription {
+    font-size: 14px;
+    margin: 10px 0;
+    font-family: Poppins;
+    color: #fff;
+    margin-top: auto;
+    text-align: center;
+}
+
+/* Modal price */
+#modalPrice {
+    color: #fff;
+    font-family: Poppins;
+    font-size: 18px;
+    transition: color 0.3s;
+    display: flex;
+    padding: 5px 15px; 
+    background-color: #5C5C5C; 
+    border-radius: 5px; 
+    position: relative; 
+    vertical-align: middle;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+}
+
+/* Close button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+}
+
+.close-button:hover {
+    color: red;
+}
+
+
+
+
+
+.product h2 {
+    font-size: 18px; /* Adjust the font size for product titles */
+    margin: 20px 0; /* Adjust the margin around titles */
+    font-family: Poppins;
+    margin-top: 30px;
+    color: #fff;
+}
+
+
+
+.product p {
+    font-size: 12px;
+    color: #fff;
+    margin: 10px 0; 
+    font-family: Poppins;
+}
+
+
+
+.product .price {
+    color: #fff;
+    font-family: Poppins;
+    font-size: 18px;
+    transition: color 0.3s;
+    display: inline-block;
+    padding: 5px 15px; 
+    background-color: #5C5C5C; 
+    border-radius: 5px; 
+    position: relative; 
+    vertical-align: middle;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    margin-right: 5px;
+
+}
+
+.add-to-cart {
+    background-color: #0563bb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px; 
+    cursor: pointer;
+    font-family: Poppins;
+    font-size: 12px;
+    text-transform: uppercase; 
+    transition: background-color 0.3s; 
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 2px;
+}
+
+.add-to-cart:hover {
+    background-color: #034a8c;
+}
+
+.details-link {
+    display: inline-block; 
+    margin-top: 10px;
+    text-decoration: none;
+    color: #0563bb; 
+    font-family: Poppins;
+    font-size: 14px; 
+    transition: color 0.3s; 
+    margin-top: a20px;
+}
+
+.details-link:hover {
+    color: #034a8c; 
+}
+
+/* In your CSS file or within a <style> tag in your HTML */
+.top-buttons {
+    position: fixed;
+    top: 180px; 
+    right: 10px; 
+    z-index: 1000; 
+}
+
+.login-button {
+    background-color: #2c2c2c; 
+    color: #fff; 
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    width: 100px;
+}
+
+.cart-button {
+    background-color: #2c2c2c; 
+    color: #fff; 
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.login-button:hover, .cart-button:hover {
+
+    background-color:#007bff;
+}
+
+
+
+/*--------------------------------------------------------------
+# Cart
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Facts
+--------------------------------------------------------------*/
+.facts .count-box {
+    padding: 30px;
+    margin-top: 30px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    background: #2c2c2c;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.facts .count-box:hover {
+    transform: translateY(-5px);
+}
+
+.facts .count-box i {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    background: #0563bb;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+}
+
+.facts .count-box span {
+    font-size: 36px;
+    display: block;
+    font-weight: 600;
+    color: #ffffff;
+    margin-top: 15px;
+}
+
+.facts .count-box p {
+    padding: 0;
+    margin: 0;
+    font-family: Poppins 16px;
+    color: #e6e6e6;
+}
+
+
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+/* Styles for the skill cards */
+.skills .skill-card {
+    border-radius: 10px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    width: 600px;
+    overflow: hidden;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: transform 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: white 1px;
+}
+
+.skills .skill-card:hover {
+    transform: scale(1.05);
+}
+
+.skills .skill-card .skill-card-header {
+    background-color: #2c2c2c;
+    color: #fff;
+    padding: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+.skills .skill-card .skill-card-header i {
+    font-size: 20px;
+    margin-right: 12px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.skills .skill-card .skill-card-header p {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.skills .skill-card .skill-card-header h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    align-items: center;
+    margin-bottom: auto;
+}
+
+.skills .skill-card .skill-card-details {
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    display: none;
+    background-color: #3d3d3d;
+    color: #333;
+    border-radius: 0 0 15px 15px;
+}
+
+.skills .skill-card .skill-card-details h3 {
+    font-weight: 600;
+    font-size: 20px;
+    color: #0563bb;
+    margin-top: 20px;
+}
+
+.skills .skill-card .skill-card-details ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.skills .skill-card .skill-card-details li {
+    font-size: 15px;
+    color: #fff;
+}
+
+.skills .skill-card .skill-card-details p {
+    font-size: 15px;
+    margin-top: 15px;
+    color: #fffe;
+}
+
+.skills .skill-card:hover .skill-card-details {
+    display: block;
+}
+
+
+
+
+
+/*--------------------------------------------------------------
+# Resume
+--------------------------------------------------------------*/
+.resume .card {
+    background: #2c2c2c;
+    border: none;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: left;
+    position: relative;
+}
+
+.resume .card .icon {
+    background: #0563bb;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 32px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -20px;
+    left: 15px;
+}
+
+.resume .card .icon i {
+    font-size: 20px;
+}
+
+.resume .card p strong {
+    color: #e6e6e6;
+    font-size: 17px;
+}
+
+.resume .card p {
+    color: #e6e6e6;
+    font-family: Poppins;
+    font-size: 12px;
+}
+
+.resume .resume-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #e6e6e6;
+}
+
+.resume .resume-item h4 {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #0563bb;
+    margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+    font-size: 15px;
+    background: #2c2c2c;
+    display: inline-block;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 10px;
+    color: #e6e6e6;
+}
+
+.resume .resume-item ul {
+    padding-left: 20px;
+    font-family: Poppins;
+    font-size: 12px;
+}
+
+.resume .resume-item ul li {
+    padding-bottom: 10px;
+    color: #e6e6e6;
+    font-family: Poppins;
+    font-size: 12px;
+}
+
+.resume .resume-item:last-child {
+    padding-bottom: 0;
+}
+
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio .portfolio-item {
+    margin-bottom: 30px;
+}
+
+/* Portfolio Filter Bar */
+.portfolio #portfolio-flters {
+    padding: 0;
+    margin: 0 auto 25px auto;
+    list-style: none;
+    text-align: center;
+    background: #181f26;
+    border-radius: 10px;
+    padding: 10px 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio #portfolio-flters li {
+    cursor: pointer;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #e6e6e6;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+    color: #fff;
+    background: #0678e3;
+    border-radius: 10px;
+}
+
+
+/* Background and Border */
+.portfolio .portfolio-wrap {
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: #181f26;
+    border: 3px solid #1a1b1c;
+    border-radius: 10px;
+}
+
+/* Info Box */
+.portfolio .portfolio-wrap .portfolio-info {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    transition: all ease-in-out 0.3s;
+    text-align: center;
+    background-color: #313335;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Info Box Content */
+.portfolio .portfolio-wrap .portfolio-info h4 {
+    font-size: 15px;
+    color: white;
+    font-family: Poppins;
+    margin: 0 0 10px 0;
+}
+
+.portfolio .portfolio-wrap .portfolio-info p {
+    color: #e6e6e6;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Links */
+.portfolio .portfolio-wrap .portfolio-links {
+    text-align: center;
+    z-index: 4;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a {
+    color: #fff;
+    margin: 0 2px;
+    font-size: 28px;
+    display: inline-block;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a:hover {
+    color: #0678e3;
+}
+
+/* Gradient Overlay */
+.portfolio .portfolio-wrap::before {
+    content: "";
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #1a1b1c 100%);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    opacity: 0;
+    border-radius: 10px;
+}
+
+/* Hover Effects */
+.portfolio .portfolio-wrap:hover::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    border-radius: 10px;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info {
+    opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info::before {
+    top: 15px;
+    left: 15px;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info::after {
+    bottom: 15px;
+    right: 15px;
+}
+
+
+/*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+.portfolio-details {
+    padding: 40px;
+    background-color: #2c2c2c;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.portfolio-details .portfolio-details-slider img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-details .portfolio-details-slider img:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #e6e6e6;
+    opacity: 1;
+    border: 1px solid #0563bb;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #0563bb;
+}
+
+.portfolio-details .portfolio-info {
+    padding: 30px;
+    background-color: #2c2c2c;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.portfolio-details .portfolio-info:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-details .portfolio-info h4 {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #333;
+    color: #09bc8a;
+}
+
+.portfolio-details .portfolio-info ul {
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
+    color: #e6e6e6;
+}
+
+.portfolio-details .portfolio-description h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #e6e6e6;
+}
+
+.portfolio-details .portfolio-description p {
+    color: #e6e6e6;
+}
+
+
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+/* Add this CSS to style the icons */
+.services .icon-box {
+    text-align: center;
+    padding: 40px;
+    transition: all ease-in-out 0.3s;
+    background: #2c2c2c;
+    border: 1px solid #1d2020;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.services .icon-box .icon {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #0563bb;
+}
+
+.services .icon-box .icon i {
+    font-size: 48px;
+    color: #fff;
+}
+
+.services .icon-box h4 {
+    font-weight: 600;
+    margin: 15px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.services .icon-box h4 a {
+    color: #0563bb;
+    transition: ease-in-out 0.3s;
+}
+
+.services .icon-box p {
+    line-height: 20px;
+    font-size: 14px;
+    margin-bottom: 0;
+    color: white;
+    font-family: Poppins;
+}
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+
+.contact .info {
+    width: 100%;
+}
+
+.contact .info i {
+    font-size: 20px;
+    color: #0563bb;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #eef7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #e6e6e6;
+}
+
+.contact .info p {
+    padding: 0 0 0 60px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #728394;
+}
+
+.contact .info .email,
+.contact .info .phone {
+    margin-top: 40px;
+}
+
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
+    background: #0563bb;
+    color: #fff;
+}
+
+/* Style for the form container */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #222; 
+    border: 1px solid #333; 
+    border-radius: 10px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Style for the form input fields */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #777; 
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444; 
+    border-radius: 5px;
+    background-color: #333; 
+    color: #ddd; 
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.email-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444; 
+    border-radius: 5px;
+    background-color: #333; 
+    color: #ddd; 
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.email-error{
+    position: absolute;
+    top: 890px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Poppins;
+    color: red;
+}
+
+.name-error{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Poppins;
+    color: red;
+}
+
+.subject-error{
+    position: absolute;
+    top: 890px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Poppins;
+    color: red;
+}
+
+.message-error{
+    position: absolute;
+    top: 890px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Poppins;
+    color: red;
+}
+
+
+.form-control::placeholder {
+    color: #fff; 
+    font-family: Poppins;
+    font-size: 14px;
+}
+
+
+.form-control:focus {
+    border-color: #007bff;
+    background-color: #444; 
+    color: #fff; 
+}
+
+/* Style for the "Send Message" button */
+button[type="submit"] {
+    background-color: #007bff; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+
+
+
+@keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*--------------------------------------------------------------
+# FAQ Section
+--------------------------------------------------------------*/
+#faq {
+    padding: 80px 0;
+}
+
+.faq-item {
+    margin-bottom: 30px;
+}
+
+.faq-item .question {
+    font-size: 20px;
+    font-weight: 600;
+    color: #e6e6e6;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    margin-left: 80px;
+    margin-top: 40px;
+}
+
+.faq-item .answer {
+    display: none;
+    padding: 15px 0;
+    font-size: 16px;
+    color: #728394;
+    border-top: 1px solid #404040;
+    margin-left: 80px;
+    margin-top: 40px;
+}
+
+.faq-item.active .question {
+    color: #0563bb;
+}
+
+/*--------------------------------------------------------------
+# FAQ Section Media Query (Adjust as needed)
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+    #faq {
+        padding: 60px 0;
+    }
+}
+
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+    background: #333;
+    color: #e6e6e6;
+    font-size: 16px;
+    text-align: center;
+    padding: 40px 0;
+}
+
+#footer h3 {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    margin: 0 0 20px 0;
+    color: #fff;
+}
+
+#footer p {
+    font-size: 14px;
+    font-style: italic;
+    margin: 0 0 30px 0;
+}
+
+#footer .social-links {
+    margin: 0 0 30px 0;
+}
+
+#footer .social-links a {
+    font-size: 24px;
+    display: inline-block;
+    background: #0563bb;
+    color: #fff;
+    line-height: 36px;
+    margin-right: 10px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+#footer .social-links a:hover {
+    background: #0678e3;
+    color: #fff;
+}
+
+#footer .copyright {
+    font-family: "Poppins", sans-serif;
+    margin: 0 0 5px 0;
+}
+
+#footer .credits {
+    font-size: 12px;
+}
+
+
+@media (max-width: 768px) {
+    #footer .social-links {
+        margin: 10px 0;
+    }
+}

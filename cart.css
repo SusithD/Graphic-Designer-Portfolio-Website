@@ -1,0 +1,249 @@
+/* Apply styles to the cart container */
+.card {
+    margin: auto;
+    max-width: 950px;
+    width: 90%;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1rem;
+    border: transparent;
+    background-color: #fff; /* Add your desired background color */
+    padding: 4vh 5vh;
+}
+
+/* Apply styles to the cart title */
+.title {
+    margin-bottom: 5vh;
+}
+
+/* Style the cart items container */
+.cart {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+/* Style the individual cart item rows */
+.row.main {
+    margin: 0;
+    padding: 2vh 0;
+    width: 100%;
+}
+
+/* Style the columns within each cart item */
+.row.main .col {
+    padding: 0 1vh;
+}
+
+/* Style the quantity adjust buttons (+ and -) */
+.row.main .col a {
+    padding: 0 1vh;
+}
+
+/* Style the close (remove) button */
+.row.main .col .close {
+    margin-left: auto;
+    font-size: 0.7rem;
+}
+
+/* Style the product images */
+.row.main .col-2 img {
+    width: 3.5rem;
+}
+
+/* Apply styles to the "Back to Shop" link */
+.back-to-shop {
+    margin-top: 4.5rem;
+}
+
+/* Apply styles to the cart summary container */
+.summary {
+    background-color: #ddd; /* Add your desired background color */
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 4vh;
+    color: rgb(65, 65, 65);
+}
+
+/* Apply styles to the cart summary title */
+.summary h5 {
+    margin-top: 4vh;
+}
+
+/* Apply styles to the horizontal rule (line) */
+.summary hr {
+    margin-top: 1.25rem;
+}
+
+/* Apply styles to the form and its elements */
+summary form {
+    padding: 2vh 0;
+}
+
+/* Apply styles to the select input for shipping */
+summary select {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1.5vh 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+}
+
+/* Apply styles to the code input */
+summary input {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+}
+
+/* Style the checkout button */
+.btn {
+    background-color: #000; /* Add your desired button background color */
+    border-color: #000;
+    color: white;
+    width: 100%;
+    font-size: 0.7rem;
+    margin-top: 4vh;
+    padding: 1vh;
+    border-radius: 0;
+}
+
+/* Remove focus and hover styles for the checkout button */
+.btn:focus, .btn:hover {
+    box-shadow: none;
+    outline: none;
+    box-shadow: none;
+    color: white;
+    -webkit-box-shadow: none;
+    transition: none;
+}
+
+/* Apply styles to links and their hover state */
+a, a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+
+/* Apply styles to the cart items container */
+.row.main {
+    margin: 0;
+    padding: 2vh 0;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Add a top border to separate items */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Add a bottom border to separate items */
+}
+
+/* Apply styles to the left column containing text (product name and description) */
+.row.main .col:first-child {
+    padding: 0 1vh;
+}
+
+/* Style the product name (text-muted) */
+.row.main .col .row.text-muted {
+    font-weight: bold; /* Make the product name bold */
+    font-size: 1rem; /* Customize the font size */
+}
+
+/* Style the product description */
+.row.main .col .row {
+    font-size: 0.9rem; /* Customize the font size */
+    color: #777; /* Add a custom text color */
+}
+
+/* Apply styles to the middle column containing quantity adjustment buttons */
+.row.main .col:nth-child(2) {
+    padding: 0 1vh;
+}
+
+/* Style the quantity adjustment buttons */
+.row.main .col a {
+    text-decoration: none;
+    color: #000; /* Customize the button color */
+    font-size: 1rem; /* Customize the font size */
+}
+
+/* Apply styles to the right column containing price and close button */
+.row.main .col:last-child {
+    padding: 0 1vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style the product price */
+.row.main .col .row:last-child {
+    font-weight: bold; /* Make the product price bold */
+    font-size: 1rem; /* Customize the font size */
+    color: #000; /* Customize the price color */
+}
+
+/* Style the close (remove) button */
+.row.main .col .close {
+    font-size: 1rem; /* Customize the font size */
+    color: #ff0000; /* Change to a red color for better visibility */
+    cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.item-details {
+    flex: 2;
+}
+
+.product-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.product-description {
+    color: #888;
+    font-size: 1rem;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-control {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.quantity-count {
+    font-size: 1.2rem;
+}
+
+.item-price {
+    font-size: 1.2rem;
+}
+
+.close-button {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.empty-cart {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 20px;
+}
+

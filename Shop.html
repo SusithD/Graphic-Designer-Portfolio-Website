@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Susith Deshan's freelance design portfolio showcases his talent and creativity. Explore his best projects and get inspired for your next design endeavor.">
+    <title>Susith Deshan Alwis | Freelance Designer | Shop</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link rel="stylesheet" href="assets/vendor/aos/aos.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css">
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+    <!-- Template Main CSS File -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- ======= Mobile nav toggle button ======= -->
+    <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex flex-column justify-content-center">
+        <nav id="navbar" class="navbar nav-menu">
+            <ul>
+                <li><a href="index.html#hero" class="nav-link scrollto active"><i class="bx bx-home"></i>
+                        <span>Home</span></a></li>
+                <li><a href="index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i>
+                        <span>About</span></a></li>
+                <li><a href="index.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i>
+                        <span>Resume</span></a></li>
+                <li><a href="index.html#services" class="nav-link scrollto"><i class="bx bx-server"></i>
+                        <span>Services</span></a></li>
+                <br>
+                <li><a href="portfolio.html" class="nav-link scrollto"><i
+                            class="bx bx-book-content"></i><span>Portfolio</span></a></li>
+                <li><a href="Shop.html" class="nav-link scrollto"><i
+                            class="fa fa-shopping-cart"></i><span>Shop</span></a></li>
+                <li><a href="Contact.html" class="nav-link scrollto"><i
+                            class="bx bx-envelope"></i><span>Contact</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- End Header -->
+
+    <!-- Shop -->
+
+    <!-- Modal container -->
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <!-- Dynamic content for the modal -->
+            <img id="modalImage" src="" alt="Larger Image">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            <span class="price" id="modalPrice"></span>
+        </div>
+    </div>
+
+    <div id="cartOverlay" class="overlayC">
+        <div class="modalC">
+            <span class="close" id="closeCartButton">&times;</span>
+            <iframe id="cartFrame" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+    </div>
+
+
+
+    <main id="main">
+        <section class="product-list" class="d-flex flex-column justify-content-center">
+            <div class="container" data-aos="zoom-in" data-aos-delay="100">
+                <div class="section-title">
+                    <h2>Shop</h2>
+                    <p>Explore our Graphic Design Portfolio Shop for a curated collection of visual treasures. From
+                        captivating logos to striking marketing materials, our designs are the key to telling your
+                        unique story.</p>
+                </div>
+
+                <br><br><br><br>
+
+
+
+
+                <!-- Product Categories -->
+                <div class="product-categories">
+                    <label for="category-filter">Filter by Category:</label>
+                    <select id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="logos">Logos & Branding</option>
+                        <option value="posters">UI Designs</option>
+                        <option value="social-media">Social Media Posts</option>
+                    </select>
+                </div>
+
+                <!-- Product Search -->
+                <div class="product-search">
+                    <label for="search-input" class="search-label">Search Items:</label>
+                    <input type="text" id="search-input" placeholder="Search for products">
+                </div>
+                <br>
+                <hr>
+
+                <div class="top-buttons">
+                    <button class="login-button" onclick="location.href='login.html'">Log In</button>
+                    <button class="cart-button" id="openCartButton"><i class="fas fa-shopping-cart"></i></button>
+
+                </div>
+
+                <div id="cartOverlay" class="overlayC">
+                    <div class="modalC">
+                        <span class="close" id="closeCartButton">&times;</span>
+                        <iframe id="cartFrame" width="100%" height="100%" frameborder="0"></iframe>
+                    </div>
+                </div>
+
+
+                <!-- Product Cards -->
+                <div class="products-container">
+                    <!-- Product 1 -->
+                    <div class="product logos">
+                        <img src="assets/img/portfolio/portfolio-1.jpg" alt="Logo Design">
+                        <h2>Leather Company Logo Design</h2>
+                        <p>Description of the logo design. Lorem ipsum dolor sit amet.</p>
+                        <span class="price">$99.99</span>
+                        <button class="add-to-cart"
+                            onclick="addToCart('Leather Company Logo Design', 'Description of the logo design', 99.99)">Add
+                            to
+                            Cart</button>
+                        <a href="product_details.html" class="details-link">Details</a>
+                    </div>
+
+                    <script>
+                        function addToCart(productName, productDescription, productPrice) {
+                            let product = {
+                                name: productName,
+                                description: productDescription,
+                                price: productPrice
+                            };
+
+                            $.ajax({
+                                type: "POST",
+                                url: "assets/php/addToCart.php", 
+                                data: product,
+                                success: function (response) {
+                                    
+                                    alert(response); 
+                                }
+                            });
+                        }
+                    </script>
+
+
+
+                    <!-- Product 2 -->
+                    <div class="product social-media">
+                        <img src="assets/img/portfolio/portfolio-2.jpg" alt="Poster Design"
+                            onclick="openModal('assets/img/portfolio/portfolio-2.jpg', 'Social Media Posts Templates', 'Create a distinctive brand identity for your leather business with our Logo Design and Full Branding Template. Craft a unique and memorable logo that encapsulates the essence of your leather products. Our comprehensive branding template will guide you in developing a cohesive and professional brand image, including typography, color schemes, and visual elements. Elevate your leather business with a brand that leaves a lasting impression.', '$99.99')">
+                        <h2>Social Media Posts Templates</h2>
+                        <p>Description of the poster design. Sed ut perspiciatis unde omnis iste natus error sit
+                            voluptatem.
+                        </p>
+                        <span class="price">$49.99</span>
+                        <button class="add-to-cart"
+                            onclick="addToCart('Social Media Posts Templates', 'Description of the poster design. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.', 59.99)">Add
+                            to Cart</button>
+                        <a href="product_details.html" class="details-link">Details</a>
+                    </div>
+
+
+                    <!-- Product 3 -->
+                    <div class="product logos">
+                        <img src="assets/img/portfolio/portfolio-10.jpg" alt="Social Media Post"
+                            onclick="openModal('assets/img/portfolio/portfolio-10.jpg', 'Travelling Logo Branding Collection', 'Create a distinctive brand identity for your leather business with our Logo Design and Full Branding Template. Craft a unique and memorable logo that encapsulates the essence of your leather products. Our comprehensive branding template will guide you in developing a cohesive and professional brand image, including typography, color schemes, and visual elements. Elevate your leather business with a brand that leaves a lasting impression.', '$99.99')">
+                        <h2>Travelling Logo Branding Collection</h2>
+                        <p>Description of the social media post design. Nemo enim ipsam voluptatem quia voluptas sit
+                            aspernatur aut odit aut fugit.</p>
+                        <span class="price">$29.99</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <a href="product_details.html" class="details-link">Details</a>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product logos">
+                        <img src="assets/img/portfolio/portfolio-15.jpg" alt="Social Media Post"
+                            onclick="openModal('assets/img/portfolio/portfolio-15.jpg', 'Logo Design Template for Interior Design Company', 'Create a distinctive brand identity for your leather business with our Logo Design and Full Branding Template. Craft a unique and memorable logo that encapsulates the essence of your leather products. Our comprehensive branding template will guide you in developing a cohesive and professional brand image, including typography, color schemes, and visual elements. Elevate your leather business with a brand that leaves a lasting impression.', '$99.99')">
+                        <h2>Logo Design Template</h2>
+                        <p>Description of the social media post design. Nemo enim ipsam voluptatem quia voluptas sit
+                            aspernatur aut odit aut fugit.</p>
+                        <span class="price">$29.99</span>
+                        <button class="add-to-cart"
+                            onclick="addToCart('Logo Design Template', 'Description of the social media post design. Nemo enim ipsam voluptatem quia voluptas sitaspernatur aut odit aut fugit.', 29.99)">Add
+                            to Cart</button>
+                        <a href="product_details.html" class="details-link">Details</a>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="product logos">
+                        <img src="assets/img/portfolio/portfolio-11.jpg" alt="Social Media Post"
+                            onclick="openModal('assets/img/portfolio/portfolio-11.jpg', 'Vehicle service Company Brand Logo Design & Mockups', 'Create a distinctive brand identity for your leather business with our Logo Design and Full Branding Template. Craft a unique and memorable logo that encapsulates the essence of your leather products. Our comprehensive branding template will guide you in developing a cohesive and professional brand image, including typography, color schemes, and visual elements. Elevate your leather business with a brand that leaves a lasting impression.', '$99.99')">
+                        <h2>Vehicle Service Company Brand Logo Design & Mockups</h2>
+                        <p>Description of the social media post design. Nemo enim ipsam voluptatem quia voluptas sit
+                            aspernatur aut odit aut fugit.</p>
+                        <span class="price">$29.99</span>
+                        <button class="add-to-cart"
+                            onclick="addToCart('Vehicle Service Company Brand Logo Design & Mockups', 'Description of the social media post design. Nemo enim ipsam voluptatem quia voluptas sitaspernatur aut odit aut fugit.', 29.99)">Add
+                            to Cart</button>
+                        <a href="product_details.html" class="details-link">Details</a>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="product posters">
+                        <img src="assets/img/portfolio/portfolio-16.jpg" alt="Social Media Post"
+                            onclick="openModal('assets/img/portfolio/portfolio-16.jpg', 'Shoe Shop Landing & Web site UI Design', 'Create a distinctive brand identity for your leather business with our Logo Design and Full Branding Template. Craft a unique and memorable logo that encapsulates the essence of your leather products. Our comprehensive branding template will guide you in developing a cohesive and professional brand image, including typography, color schemes, and visual elements. Elevate your leather business with a brand that leaves a lasting impression.', '$99.99')">
+                        <h2>Shoe Shop Landing Page Design</h2>
+                        <p>Description of the social media post design. Nemo enim ipsam voluptatem quia voluptas sit
+                            aspernatur aut odit aut fugit.</p>
+                        <span class="price">$29.99</span>
+                        <button class="add-to-cart"
+                            onclick="addToCart('Shoe Shop Landing Page Design', 'Description of the social media post design. Nemo enim ipsam voluptatem quia voluptas sitaspernatur aut odit aut fugit.', 29.99)">Add
+                            to Cart</button>
+                        <a href="product_details.html" class="details-link">Details</a>
+                    </div>
+
+                    <!-- Product 7 -->
+                    <div class="product social-media">
+                        <img src="assets/img/portfolio/portfolio-5.jpg" alt="Social Media Post"
+                            onclick="openModal('assets/img/portfolio/portfolio-5.jpg', 'Social Media Post Templates for Clothing Company', 'Create a distinctive brand identity for your leather business with our Logo Design and Full Branding Template. Craft a unique and memorable logo that encapsulates the essence of your leather products. Our comprehensive branding template will guide you in developing a cohesive and professional brand image, including typography, color schemes, and visual elements. Elevate your leather business with a brand that leaves a lasting impression.', '$99.99')">
+                        <h2>Social Media Post Templates</h2>
+                        <p>Description of the social media post design. Nemo enim ipsam voluptatem quia voluptas sit
+                            aspernatur aut odit aut fugit.</p>
+                        <span class="price">$29.99</span>
+                        <button class="add-to-cart"
+                            onclick="addToCart('Social Media Post Templates', 'Description of the social media post design. Nemo enim ipsam voluptatem quia voluptas sitaspernatur aut odit aut fugit.', 29.99)">Add
+                            to Cart</button>
+                        <a href="product_details.html" class="details-link">Details</a>
+                    </div>
+
+                    <!-- Product 8 -->
+                    <div class="product social-media">
+                        <div class="product-image">
+                            <img src="assets/img/portfolio/portfolio-9.jpg" alt="Social Media Post"
+                                onclick="openModal('assets/img/portfolio/portfolio-9.jpg', 'Social Media Post Templates for Costetics Company', 'Create a distinctive brand identity for your leather business with our Logo Design and Full Branding Template. Craft a unique and memorable logo that encapsulates the essence of your leather products. Our comprehensive branding template will guide you in developing a cohesive and professional brand image, including typography, color schemes, and visual elements. Elevate your leather business with a brand that leaves a lasting impression.', '$99.99')">
+                        </div>
+                        <h2>Social Media Post Templates</h2>
+                        <p>Description of the social media post design. Nemo enim ipsam voluptatem quia voluptas sit
+                            aspernatur aut odit aut fugit.</p>
+                        <span class="price"
+                            onclick="addToCart('Social Media Post Templates', 'Description of the social media post design. Nemo enim ipsam voluptatem quia voluptas sitaspernatur aut odit aut fugit.', 29.99)">$29.99</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <a href="product_details.html" class="details-link">View Full Project</a>
+                    </div>
+                </div>
+
+
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/php-email-form/send_email.php"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        const openCartButton = document.getElementById("openCartButton");
+        const closeCartButton = document.getElementById("closeCartButton");
+        const cartOverlay = document.getElementById("cartOverlay");
+        const cartFrame = document.getElementById("cartFrame");
+
+        openCartButton.addEventListener("click", () => {
+            cartOverlay.style.display = "block";
+            cartFrame.src = "cart.php";
+        });
+
+        closeCartButton.addEventListener("click", () => {
+            cartOverlay.style.display = "none";
+            cartFrame.src = "about:blank";
+        });
+    </script>
+
+</body>
+
+</html>

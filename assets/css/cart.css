@@ -1,0 +1,159 @@
+body {
+    background-color: #222; 
+    color: #fff; 
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Update the card style */
+.card {
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: auto;
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    height: 600px;
+    height: auto;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1rem;
+    border: transparent;
+    background-color: #333; 
+    color: #fff; 
+}
+
+/* Update the title style */
+.title {
+    margin: 5vh 0; 
+}
+
+/* Update the shopping cart title style */
+.cart-title {
+    font-size: 1.5rem; 
+}
+
+/* Update the cart section style */
+.cart {
+    background-color: #444;
+    padding: 4vh 5vh;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+/* Update the cart table style */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-table th,
+.cart-table td {
+    border: 1px solid #555; 
+    padding: 1vh 2vh;
+}
+
+.cart-table th {
+    background-color: #555;
+}
+
+/* Update the product name and description styles */
+.product-name,
+.product-description {
+    color: #fff; 
+}
+
+/* Update the quantity section style */
+.quantity-control {
+    color: #fff; 
+    background-color: #444; 
+    padding: 0.5vh 1vh;
+    margin: 0 0.3vh;
+    text-decoration: none;
+    border-radius: 0.3rem;
+}
+
+.quantity-count {
+    color: #fff;
+    padding: 0 0.5vh;
+}
+
+/* Update the price style */
+.item-price {
+    color: #fff; 
+}
+
+/* Update the close button style */
+.close-button {
+    color: #fff; 
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Update the summary section style */
+.summary {
+    background-color: #2b2a2a; 
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 4vh;
+    color: #fff;
+}
+
+/* Update the form and input styles */
+form {
+    padding: 2vh 0;
+}
+
+select {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1.5vh 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+    background-color: #555; 
+    color: #fff; 
+}
+
+input {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+    background-color: #555; 
+    color: #fff; 
+}
+
+/* Update the button style */
+.btn {
+    background-color: #0450a1;
+    color: #fff;
+    width: 100%;
+    font-family: Poppins;
+    font-size: 0.7rem;
+    text-align: center;
+    margin-top: 4vh;
+    padding: 1vh;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:focus {
+    box-shadow: none;
+    outline: none;
+    color: #fff;
+    transition: none;
+}
+
+.btn:hover {
+    background-color: #02366d; 
+}
+
+/* Update the link styles */
+a {
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: none;
+}

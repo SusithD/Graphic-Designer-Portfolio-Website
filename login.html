@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Responsive Login and Signup Form </title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="assets/css/login.css">
+                
+        <!-- Boxicons CSS -->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+                        
+    </head>
+    <body>
+        
+        <section class="container forms">
+
+            
+            <div class="form login">
+                <div class="form-content">
+                    <header>Login</header>
+                    <form action="assets/php/login.php" method="post">
+                        <div class="field input-field">
+                            <input type="email" name="email" placeholder="Email" class="input" required>
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="password" name="password" placeholder="Password" class="password" required>
+                            <i class='bx bx-hide eye-icon'></i>
+                        </div>
+
+                        <div class="form-link">
+                            <a href="#" class="forgot-pass">Forgot password?</a>
+                        </div>
+
+                        <div class="field button-field">
+                            <button>Login</button>
+                        </div>
+                    </form>
+
+                    <div class="form-link">
+                        <span>Don't have an account? <a href="#" class="link signup-link">Signup</a></span>
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="media-options">
+                    <a href="#" class="field facebook">
+                        <span>Login with Facebook</span>
+                    </a>
+                </div>
+
+                <div class="media-options">
+                    <a href="#" class="field google">
+                        <span>Login with Google</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Signup Form -->
+
+            <div class="form signup">
+                <div class="form-content">
+                    <header>Signup</header>
+                    <form action="assets/php/signup.php" method="post">
+                        <div class="field input-field">
+                            <input type="text" name="username" id="username" placeholder="User Name" class="input" onkeyup="validateUsername()"  required>
+                            <span id="username-error" class="error"></span>
+                            <script>
+                                function validateUsername() {
+                                    var usernameField = document.getElementById("username");
+                                    var usernameError = document.getElementById("username-error");
+                                    var usernameValue = usernameField.value.trim();
+                            
+                                    if (usernameValue === "") {
+                                        usernameError.innerHTML = "Username is required.";
+                                        return false;
+                                    }
+                            
+                                    usernameError.innerHTML = "";
+                                    return true;
+                                }
+                            </script>
+                        </div>
+                    
+                        <div class="field input-field">
+                            <input type="email" name="email" id="email" placeholder="Email Address" class="email" onkeyup="validateEmail()" required>
+                            <span id="email-error" class="error"></span>
+                            <script>
+                                function validateEmail() {
+                                    var emailField = document.getElementById("email");
+                                    var emailError = document.getElementById("email-error");
+                                    var emailValue = emailField.value.trim();
+
+                                    if (emailValue === "") {
+                                        emailError.innerHTML = "Email is required.";
+                                        return false;
+                                    }
+
+                                    if (!emailValue.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+                                        emailError.innerHTML = "Please Enter a Valid Email";
+                                        return false;
+                                    }
+
+                                    emailError.innerHTML = "";
+                                    return true;
+                                }
+                            </script>
+                        </div>
+                    
+                        <div class="field input-field">
+                            <input type="password" name="ipassword" id="ipassword" placeholder="Password" class="ipassword" onkeyup="validatePassword()" required>
+                            <span id="password-error" class="error"></span>
+                            <i class='bx bx-hide eye-icon'></i>
+                            <script>
+                                function validatePassword() {
+                                    var passwordField = document.getElementById("ipassword");
+                                    var passwordError = document.getElementById("password-error");
+                                    var passwordValue = passwordField.value.trim();
+                            
+                                    if (passwordValue === "") {
+                                        passwordError.innerHTML = "Password is required.";
+                                        return false;
+                                    }
+                            
+                                    if (passwordValue.length < 8) {
+                                        passwordError.innerHTML = "Password must be at least 8 characters long.";
+                                        return false;
+                                    }
+                            
+                                    passwordError.innerHTML = "";
+                                    return true;
+                                }
+                            </script>
+                        </div>
+                    
+                        <div class="field button-field">
+                            <button id="signup-button">Signup</button>
+                        </div>
+
+                        
+                    </form>
+                    
+
+                    <div class="form-link">
+                        <span>Already have an account? <a href="#" class="link login-link">Login</a></span>
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="media-options">
+                    <a href="#" class="field facebook">
+                        <span>Login with Facebook</span>
+                    </a>
+                </div>
+
+                <div class="media-options">
+                    <a href="#" class="field google">
+                        <span>Login with Google</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- JavaScript -->
+        <script src="assets/js/login.js"></script>
+    </body>
+</html>
